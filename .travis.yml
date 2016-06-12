@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  -  "0.12"
+before_script:
+  - npm install gulp
+script:
+  - gulp build
+
+deploy:
+  provider: heroku
+  app: pdes-flappernews
+  api_key:
+    secure: $HEROKU_API_KEY
